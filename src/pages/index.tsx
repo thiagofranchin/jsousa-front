@@ -1,5 +1,11 @@
-import Main from 'components/Main'
-
 export default function Home() {
-  return <Main />
+  return (
+    <>
+      <div className="container">
+        <div className="row">
+          <h1>Home</h1>
+        </div>
+      </div>
+    </>
+  )
 }
