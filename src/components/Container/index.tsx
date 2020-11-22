@@ -7,7 +7,7 @@ type Props = {
   classContainer?: string
 }
 
-const Container = ({ children, isFluid = false, classContainer }: Props) => (
+const Container = ({ children, isFluid, classContainer }: Props) => (
   <S.ContainerSection>
     <div className={`container${isFluid ? '-fluid' : ''} ${classContainer}`}>
       <div className="row">{children}</div>
