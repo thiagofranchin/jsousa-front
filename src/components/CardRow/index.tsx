@@ -1,14 +1,18 @@
 import * as S from './styles'
 
-const CardRow = () => (
+type Props = {
+  titleSection?: string
+  subTitleSection?: string
+}
+
+const CardRow = ({
+  titleSection = 'Welcome To Klinarmen',
+  subTitleSection = `Subjects to ecstatic children he could ye leave up as built match. Dejection agreeable attention set suspected led offending dmitting an performed supposing by garden agreed matter.`
+}: Props): JSX.Element => (
   <>
     <S.CardRowHeader className="col-md-12">
-      <S.CardRowTitle>Welcome To Klinarmen</S.CardRowTitle>
-      <S.CardRowParagraph>
-        Subjects to ecstatic children he could ye leave up as built match.
-        Dejection agreeable attention set suspected led offending dmitting an
-        performed supposing by garden agreed matter.
-      </S.CardRowParagraph>
+      <S.CardRowTitle>{titleSection}</S.CardRowTitle>
+      <S.CardRowParagraph>{subTitleSection}</S.CardRowParagraph>
     </S.CardRowHeader>
 
     <S.CardRowColumnWrapper className="col-md-4">

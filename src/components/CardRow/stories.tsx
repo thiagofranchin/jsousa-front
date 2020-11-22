@@ -7,10 +7,8 @@ export default {
   component: CardRow
 } as Meta
 
-export const Default: Story = () => {
-  return (
-    <Container isFluid={false}>
-      <CardRow />
-    </Container>
-  )
-}
+export const Default: Story = (args) => (
+  <Container isFluid={false}>
+    <CardRow {...args} />
+  </Container>
+)

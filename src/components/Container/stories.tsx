@@ -6,12 +6,12 @@ export default {
   component: Container
 } as Meta
 
-export const Default: Story = () => {
+export const Default: Story = (args) => {
   return (
-    <Container isFluid={true} classContainer="p-5 bg-dark">
-      <div className="col-sm-4 bg-primary">Primary</div>
-      <div className="col-sm-4 bg-success">Success</div>
-      <div className="col-sm-4 bg-danger">Danger</div>
+    <Container {...args}>
+      <div className="col-sm-4 bg-primary p-3">Primary</div>
+      <div className="col-sm-4 bg-success p-3">Success</div>
+      <div className="col-sm-4 bg-danger p-3">Danger</div>
     </Container>
   )
 }
