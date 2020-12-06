@@ -1,23 +1,23 @@
 import * as S from './styles'
 
 type Props = {
+  title?: string
+  text?: string
   alignText?: string
   bgColor?: string
+  textColor?: string
   classContainer?: string
   contentIsFluid?: boolean
-  text?: string
-  textColor?: string
-  title?: string
 }
 
 const Jumbotron = ({
+  title,
+  text,
   alignText,
   bgColor,
-  classContainer,
-  contentIsFluid,
-  text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis tempor vestibulum. Integer rutrum in lectus nec accumsan. Nulla ultricies convallis justo non tempor. Maecenas posuere imperdiet dictum. Donec luctus ex eu imperdiet finibus. Quisque placerat, nunc luctus pellentesque placerat, est est fringilla ante, id facilisis nunc enim at tellus.',
   textColor,
-  title = 'Title'
+  classContainer,
+  contentIsFluid
 }: Props) => (
   <S.JumbotronWrapper
     className={`jumbotron jumbotron-fluid
@@ -31,8 +31,8 @@ const Jumbotron = ({
       ${classContainer ? classContainer : ''}
       `}
     >
-      <h1 className="display-4">{title}</h1>
-      <p className="lead">{text}</p>
+      <h1 className="display-4">{title ? title : ''}</h1>
+      <p className="lead">{text ? text : text}</p>
     </div>
   </S.JumbotronWrapper>
 )
