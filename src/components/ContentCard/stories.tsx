@@ -64,7 +64,7 @@ export default {
 } as Meta
 
 export const Default: Story = (args) => (
-  <Container isFluid={false}>
+  <Container isFluid={args.contentIsFluid}>
     <ContentCard {...args} />
   </Container>
 )
@@ -79,8 +79,16 @@ Default.args = {
   bgColor: 'white',
   textColor: '',
   classContainer: '',
+  urlImgTopic1: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607895219/images-default/iconHouse_vwnc0f.png`,
+  altImgTopic1: 'Woman with some cleaning productss',
+  textTopic1:
+    'We offer a flat-rate pricing for our weekly biweekly or monthly residential cleaning service wWhether',
+  urlImgTopic2: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607895219/images-default/iconHouse2_pubhex.png`,
+  altImgTopic2: 'Woman with some cleaning productss',
+  textTopic2: 'We offer a flat-rate pricing for our weekly biweekly',
   urlImage: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1606274341/images-default/image-content-card-1_h7qi0w.jpg`,
   altImage: 'Woman with some cleaning productss',
   linkText: 'About Us',
-  linkUrl: 'Url'
+  linkUrl: 'Url',
+  contentIsFluid: false
 }

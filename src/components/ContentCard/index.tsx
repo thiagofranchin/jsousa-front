@@ -10,6 +10,12 @@ type Props = {
   textColor?: string
   classContainer?: string
   contentIsFluid?: boolean
+  urlImgTopic1?: string
+  altImgTopic1?: string
+  textTopic1?: string
+  urlImgTopic2?: string
+  altImgTopic2?: string
+  textTopic2?: string
   urlImage?: string
   altImage?: string
   linkText?: string
@@ -27,6 +33,12 @@ const ContentCard = ({
   classContainer,
   urlImage,
   altImage,
+  urlImgTopic1,
+  altImgTopic1,
+  textTopic1,
+  urlImgTopic2,
+  altImgTopic2,
+  textTopic2,
   linkText,
   linkUrl
 }: Props) => (
@@ -38,9 +50,13 @@ const ContentCard = ({
     `}
   >
     <S.ContentCardRowWrapper
-      className={`d-flex 
-      ${alignText == 'right' ? 'flex-row-reverse' : 'flex-row'}`}
+      className={`d-flex row
+      ${alignText == 'right' ? 'flex-row' : 'flex-row-reverse'}`}
     >
+      <S.ContentCardColumnWrapper className="col-lg-6 content-card-img">
+        <img src={urlImage} alt={altImage} className="w-100" />
+      </S.ContentCardColumnWrapper>
+
       <S.ContentCardColumnWrapper className="col-lg-6">
         <S.ContentCardEyeBrow
           className={`${eyebrowLinkColor ? `text-${eyebrowLinkColor}` : ''}`}
@@ -57,8 +73,20 @@ const ContentCard = ({
             }`}
           ></small>
         </S.ContentCardEyeBrow>
+
         <h2 className={`content-card-title`}>{title}</h2>
+
         <p className="content-card-text">{text}</p>
+
+        <S.ContentCardTextList className="content-card-text-list">
+          <img src={urlImgTopic1} alt={altImgTopic1} />
+          <p>{textTopic1}</p>
+        </S.ContentCardTextList>
+
+        <S.ContentCardTextList className="content-card-text-list">
+          <img src={urlImgTopic2} alt={altImgTopic2} />
+          <p>{textTopic2}</p>
+        </S.ContentCardTextList>
         <S.ContentCardLink
           className={`content-card-link ${
             eyebrowLinkColor ? `text-${eyebrowLinkColor}` : ''
@@ -67,9 +95,6 @@ const ContentCard = ({
         >
           {linkText}
         </S.ContentCardLink>
-      </S.ContentCardColumnWrapper>
-      <S.ContentCardColumnWrapper className="col-lg-6">
-        <img src={urlImage} alt={altImage} className="w-100" />
       </S.ContentCardColumnWrapper>
     </S.ContentCardRowWrapper>
   </S.ContentCardWrapper>

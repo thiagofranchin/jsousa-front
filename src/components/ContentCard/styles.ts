@@ -3,7 +3,11 @@ import styled from 'styled-components'
 export const ContentCardWrapper = styled.div``
 export const ContentCardLeftText = styled.div``
 export const ContentCardRowWrapper = styled.div``
-export const ContentCardColumnWrapper = styled.div``
+export const ContentCardColumnWrapper = styled.div`
+  &.content-card-img {
+    margin-bottom: 15px;
+  }
+`
 export const ContentCardEyeBrow = styled.span`
   font-size: 16px;
   letter-spacing: 2px;
@@ -28,11 +32,28 @@ export const ContentCardEyeBrow = styled.span`
     }
   }
 `
+export const ContentCardTextList = styled.div`
+  &.content-card-text-list {
+    display: flex;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    p {
+      margin-left: 15px;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      align-self: flex-end;
+    }
+  }
+`
 export const ContentCardLink = styled.a`
   &.content-card-link {
     position: relative;
     display: inline-block;
     text-decoration: none;
+    margin-top: 15px;
 
     ::after {
       content: '>>';
