@@ -17,3 +17,7 @@ export const Default: Story = (args) => {
     </div>
   )
 }
+
+Default.args = {
+  widthLogo: `300`
+}
