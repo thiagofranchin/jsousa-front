@@ -7,6 +7,7 @@ import { AngleRight } from '@styled-icons/fa-solid/AngleRight'
 import { Clock } from '@styled-icons/bootstrap/Clock'
 import { Telephone } from '@styled-icons/bootstrap/Telephone'
 import { TelephoneFill } from '@styled-icons/bootstrap/TelephoneFill'
+import { Menu } from '@styled-icons/boxicons-regular/Menu'
 
 type Props = {
   colorIcon?: string
@@ -22,6 +23,7 @@ const Icons = ({ colorIcon = '#28B0D1' }: Props) => (
     <Clock width="30" color={colorIcon} />
     <Telephone width="30" color={colorIcon} />
     <TelephoneFill width="30" color={colorIcon} />
+    <Menu width="30" color={colorIcon} />
   </S.Wrapper>
 )
 

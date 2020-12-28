@@ -23,17 +23,19 @@ const CardIcon = ({
   sizeIcon = 40
 }: Props) => (
   <>
-    <div className="mb-4">
-      <S.Wrapper className={classComponent ? classComponent : ''}>
+    <div className="col-6">
+      <S.Wrapper
+        className={`${classComponent ? classComponent : ''} card-icon`}
+      >
         <div className="row no-gutters position-relative">
           <div
-            className={`col-icon p-md-4 d-flex align-items-center ${
+            className={`col-icon p-md-3 d-flex align-items-center ${
               colorIcon ? `text-${colorIcon}` : ''
             }`}
           >
             <Clock width={sizeIcon} />
           </div>
-          <div className="col-text position-static p-4 pl-md-0 d-flex align-items-center">
+          <div className="col-text position-static py-4 pl-md-0 d-flex align-items-center">
             <div>
               <S.TitleCard className="mt-0">
                 {cardLeftTitle ? cardLeftTitle : ''}
@@ -44,17 +46,19 @@ const CardIcon = ({
         </div>
       </S.Wrapper>
     </div>
-    <div className="mb-4">
-      <S.Wrapper className={classComponent ? classComponent : ''}>
+    <div className="col-6">
+      <S.Wrapper
+        className={`${classComponent ? classComponent : ''} card-icon`}
+      >
         <div className="row no-gutters position-relative">
           <div
-            className={`col-icon p-md-4 d-flex align-items-center ${
+            className={`col-icon p-md-3 d-flex align-items-center ${
               colorIcon ? `text-${colorIcon}` : ''
             }`}
           >
             <TelephoneFill width={sizeIcon} color={colorIcon} />
           </div>
-          <div className="col-text position-static p-4 pl-md-0 d-flex align-items-center">
+          <div className="col-text position-static py-4 pl-md-0 d-flex align-items-center">
             <div>
               <S.TitleCard className="mt-0">
                 {cardRightTitle ? cardRightTitle : ''}

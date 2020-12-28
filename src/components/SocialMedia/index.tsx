@@ -14,6 +14,7 @@ type Props = {
 }
 
 const SocialMedia = ({
+  classComponent,
   colorIcon,
   alignIcon,
   widthIcon = 50,
@@ -22,7 +23,11 @@ const SocialMedia = ({
   titleFacebook,
   titleInstagram
 }: Props) => (
-  <S.Wrapper className={alignIcon ? `text-${alignIcon}` : ''}>
+  <S.Wrapper
+    className={`${classComponent ? classComponent : ''} ${
+      alignIcon ? `text-${alignIcon}` : ''
+    }`}
+  >
     <a
       className={colorIcon ? `text-${colorIcon}` : ''}
       href={urlFacebook}
