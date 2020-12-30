@@ -32,7 +32,7 @@ const Jumbotron = ({
       `}
     >
       <h1 className="display-4">{title ? title : ''}</h1>
-      <p className="lead">{text ? text : text}</p>
+      <p className="lead">{text ? text : ''}</p>
     </div>
   </S.JumbotronWrapper>
 )

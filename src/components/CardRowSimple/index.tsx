@@ -27,7 +27,7 @@ const CardRowSimple = ({
     <div className="col-md-6 mb-4">
       <S.Wrapper className={classComponent ? classComponent : ''}>
         <div className="row no-gutters position-relative">
-          <div className="col-md-6 mb-md-0 p-md-4">
+          <div className="col-md-6 p-md-4">
             <img
               src={cardLeftUrlImage ? cardLeftUrlImage : ''}
               className="w-100"
@@ -46,7 +46,7 @@ const CardRowSimple = ({
     <div className="col-md-6 mb-4">
       <S.Wrapper className={classComponent ? classComponent : ''}>
         <div className="row no-gutters position-relative">
-          <div className="col-md-6 mb-md-0 p-md-4">
+          <div className="col-md-6 p-md-4">
             <img
               src={cardRightUrlImage ? cardRightUrlImage : ''}
               className="w-100"
