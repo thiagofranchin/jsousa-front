@@ -4,6 +4,7 @@ import Carousel from '../components/Carousel'
 import CardRow from '../components/CardRow'
 import ContentCard from '../components/ContentCard'
 import CardRowSimple from '../components/CardRowSimple'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -63,6 +64,7 @@ export default function Home() {
           classComponent=""
         />
       </Container>
+      <Footer />
     </>
   )
 }
