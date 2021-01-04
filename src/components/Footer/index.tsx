@@ -12,8 +12,8 @@ type Props = {
 }
 
 const Footer = ({ classComponent, colorTextMenu }: Props) => (
-  <div
-    className={`py-5 bg-dark text-white ${
+  <S.Wrapper
+    className={`footer py-5 bg-dark text-white ${
       classComponent ? classComponent : ''
     }`}
   >
@@ -69,7 +69,7 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => (
         <SocialMedia widthIcon={30} />
       </div>
     </Container>
-  </div>
+  </S.Wrapper>
 )
 
 export default Footer

@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Logo = ({ classComponent, widthLogo, urlImage }: Props) => (
-  <S.Wrapper className={classComponent ? classComponent : ''}>
+  <S.Wrapper className={`logo ${classComponent ? classComponent : ''}`}>
     <S.LogoWrapper
       src={
         urlImage

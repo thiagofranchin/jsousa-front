@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.main``
+export const Wrapper = styled.footer`
+  .logo {
+    display: inline-flex;
+    max-width: 230px;
+  }
+`
 
 export const MenuButton = styled.li`
+  border-bottom: 1px solid #15b1d7;
   &.active {
     a {
       font-weight: bold;
