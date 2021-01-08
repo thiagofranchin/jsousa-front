@@ -5,7 +5,7 @@ type Props = {
 }
 
 const {{pascalCase name}} = ({ classComponent }: Props) => (
-  <S.Wrapper className={classComponent ? classComponent : ''}>
+  <S.Wrapper className={`{{kebabCase name}} ${classComponent ? classComponent : ''}`}>
     <h1>{{pascalCase name}}</h1>
   </S.Wrapper>
 )

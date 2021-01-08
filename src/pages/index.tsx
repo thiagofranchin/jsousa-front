@@ -1,18 +1,19 @@
-import Container from '../components/Container'
-import Header from '../components/Header'
+import Layout from '../components/Layout'
 import Carousel from '../components/Carousel'
 import CardRow from '../components/CardRow'
 import ContentCard from '../components/ContentCard'
 import CardRowSimple from '../components/CardRowSimple'
-import Footer from '../components/Footer'
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Carousel />
-      <Container classContainer="py-5">
+      <Layout>
+        <Carousel />
+
         <CardRow
+          bgColor=""
+          contentIsFluid={false}
+          classComponent="py-5"
           titleSection="Welcome To J. Sousa Cleaning Services"
           subTitleSection="Subjects to ecstatic children he could ye leave up as built match. Dejection agreeable attention set suspected led offending dmitting an performed supposing by garden agreed matter."
           urlImageCard1="https://res.cloudinary.com/jsousacleaningservices/image/upload/v1606274340/images-default/icon-1_ekxwsg.png"
@@ -28,15 +29,15 @@ export default function Home() {
           textCard2="2 Some quick example text to build on the card title and make up the bulk of the card content."
           textCard3="3 Some quick example text to build on the card title and make up the bulk of the card content."
         />
-      </Container>
-      <Container>
+
         <ContentCard
           alignText="right"
           altImage="Woman with some cleaning productss"
           altImgTopic1="Woman with some cleaning productss"
           altImgTopic2="Woman with some cleaning productss"
-          bgColor="white"
+          bgColor="light"
           classContainer=""
+          contentIsFluid={false}
           eyebrow="Eyebrow"
           eyebrowLinkColor="primary"
           linkText="About Us"
@@ -50,9 +51,10 @@ export default function Home() {
           urlImgTopic1="https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607895219/images-default/iconHouse_vwnc0f.png"
           urlImgTopic2="https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607895219/images-default/iconHouse2_pubhex.png"
         />
-      </Container>
-      <Container>
+
         <CardRowSimple
+          bgColor=""
+          contentIsFluid={false}
           cardLeftAltImage=""
           cardLeftText="Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate."
           cardLeftTitle="House Cleaning"
@@ -61,10 +63,9 @@ export default function Home() {
           cardRightText="Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate."
           cardRightTitle="Pool Cleaning"
           cardRightUrlImage="https://res.cloudinary.com/jsousacleaningservices/image/upload/v1606274340/images-default/image-2_wr4znu.jpg"
-          classComponent=""
+          classComponent="py-5"
         />
-      </Container>
-      <Footer />
+      </Layout>
     </>
   )
 }

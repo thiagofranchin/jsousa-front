@@ -8,6 +8,7 @@ import { Clock } from '@styled-icons/bootstrap/Clock'
 import { Telephone } from '@styled-icons/bootstrap/Telephone'
 import { TelephoneFill } from '@styled-icons/bootstrap/TelephoneFill'
 import { Menu } from '@styled-icons/boxicons-regular/Menu'
+import { DoubleArrow } from '@styled-icons/material-rounded/DoubleArrow'
 
 type Props = {
   colorIcon?: string
@@ -24,6 +25,7 @@ const Icons = ({ colorIcon = '#28B0D1' }: Props) => (
     <Telephone width="30" color={colorIcon} />
     <TelephoneFill width="30" color={colorIcon} />
     <Menu width="30" color={colorIcon} />
+    <DoubleArrow width="10" aria-hidden="true" />
   </S.Wrapper>
 )
 

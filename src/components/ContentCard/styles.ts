@@ -1,11 +1,20 @@
 import styled from 'styled-components'
 
-export const ContentCardWrapper = styled.div``
+export const ContentCardWrapper = styled.div`
+  margin-bottom: 0;
+`
 export const ContentCardLeftText = styled.div``
 export const ContentCardRowWrapper = styled.div``
 export const ContentCardColumnWrapper = styled.div`
   &.content-card-img {
     margin-bottom: 15px;
+
+    img {
+      border-radius: 30px;
+      border-width: 6px;
+      border-style: inset;
+      border-block-style: none;
+    }
   }
 `
 export const ContentCardEyeBrow = styled.span`
@@ -54,10 +63,5 @@ export const ContentCardLink = styled.a`
     display: inline-block;
     text-decoration: none;
     margin-top: 15px;
-
-    ::after {
-      content: '>>';
-      padding-left: 5px;
-    }
   }
 `
