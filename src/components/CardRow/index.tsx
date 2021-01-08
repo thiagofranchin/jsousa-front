@@ -1,6 +1,10 @@
+import Container from '../Container'
 import * as S from './styles'
 
 type Props = {
+  bgColor?: string
+  classComponent?: string
+  contentIsFluid?: boolean
   titleSection?: string
   subTitleSection?: string
   urlImageCard1?: string
@@ -21,6 +25,9 @@ type Props = {
 }
 
 const CardRow = ({
+  bgColor,
+  classComponent,
+  contentIsFluid,
   titleSection,
   subTitleSection,
   urlImageCard1,
@@ -39,53 +46,58 @@ const CardRow = ({
   textCard2,
   textCard3
 }: Props) => (
-  <>
-    <S.CardRowHeader className="col-md-12">
-      <S.CardRowTitle>{titleSection}</S.CardRowTitle>
-      <S.Divider />
-      <S.CardRowParagraph>{subTitleSection}</S.CardRowParagraph>
-    </S.CardRowHeader>
+  <div className={bgColor ? `bg-${bgColor}` : 'bg-transparent'}>
+    <Container
+      isFluid={contentIsFluid ? contentIsFluid : false}
+      classContainer={classComponent ? classComponent : ''}
+    >
+      <S.CardRowHeader className={`col-md-12`}>
+        <S.CardRowTitle>{titleSection}</S.CardRowTitle>
+        <S.Divider />
+        <S.CardRowParagraph>{subTitleSection}</S.CardRowParagraph>
+      </S.CardRowHeader>
 
-    <S.CardRowColumnWrapper className="col-md-4">
-      <S.CardWrapper className="card">
-        <img
-          src={urlImageCard1}
-          className={`card-img-top w-${sizeImageCard1}`}
-          alt={altImageCard1}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{titleCard1}</h5>
-          <p className="card-text">{textCard1}</p>
-        </div>
-      </S.CardWrapper>
-    </S.CardRowColumnWrapper>
-    <S.CardRowColumnWrapper className="col-md-4">
-      <S.CardWrapper className="card">
-        <img
-          src={urlImageCard2}
-          className={`card-img-top w-${sizeImageCard2}`}
-          alt={altImageCard2}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{titleCard2}</h5>
-          <p className="card-text">{textCard2}</p>
-        </div>
-      </S.CardWrapper>
-    </S.CardRowColumnWrapper>
-    <S.CardRowColumnWrapper className="col-md-4">
-      <S.CardWrapper className="card">
-        <img
-          src={urlImageCard3}
-          className={`card-img-top w-${sizeImageCard3}`}
-          alt={altImageCard3}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{titleCard3}</h5>
-          <p className="card-text">{textCard3}</p>
-        </div>
-      </S.CardWrapper>
-    </S.CardRowColumnWrapper>
-  </>
+      <S.CardRowColumnWrapper className="col-md-4">
+        <S.CardWrapper className="card">
+          <img
+            src={urlImageCard1}
+            className={`card-img-top w-${sizeImageCard1}`}
+            alt={altImageCard1}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{titleCard1}</h5>
+            <p className="card-text">{textCard1}</p>
+          </div>
+        </S.CardWrapper>
+      </S.CardRowColumnWrapper>
+      <S.CardRowColumnWrapper className="col-md-4">
+        <S.CardWrapper className="card">
+          <img
+            src={urlImageCard2}
+            className={`card-img-top w-${sizeImageCard2}`}
+            alt={altImageCard2}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{titleCard2}</h5>
+            <p className="card-text">{textCard2}</p>
+          </div>
+        </S.CardWrapper>
+      </S.CardRowColumnWrapper>
+      <S.CardRowColumnWrapper className="col-md-4">
+        <S.CardWrapper className="card">
+          <img
+            src={urlImageCard3}
+            className={`card-img-top w-${sizeImageCard3}`}
+            alt={altImageCard3}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{titleCard3}</h5>
+            <p className="card-text">{textCard3}</p>
+          </div>
+        </S.CardWrapper>
+      </S.CardRowColumnWrapper>
+    </Container>
+  </div>
 )
 
 export default CardRow

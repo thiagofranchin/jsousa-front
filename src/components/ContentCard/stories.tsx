@@ -1,5 +1,4 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import Container from 'components/Container'
 import ContentCard from '.'
 
 export default {
@@ -10,6 +9,7 @@ export default {
       control: {
         type: 'select',
         options: [
+          'transparent',
           'white',
           'primary',
           'secondary',
@@ -32,6 +32,7 @@ export default {
       control: {
         type: 'select',
         options: [
+          'transparent',
           'white',
           'primary',
           'secondary',
@@ -48,6 +49,24 @@ export default {
       control: {
         type: 'select',
         options: [
+          'transparent',
+          'white',
+          'primary',
+          'secondary',
+          'success',
+          'info',
+          'warning',
+          'danger',
+          'light',
+          'dark'
+        ]
+      }
+    },
+    borderColorImage: {
+      control: {
+        type: 'select',
+        options: [
+          'transparent',
           'white',
           'primary',
           'secondary',
@@ -63,11 +82,7 @@ export default {
   }
 } as Meta
 
-export const Default: Story = (args) => (
-  <Container isFluid={args.contentIsFluid}>
-    <ContentCard {...args} />
-  </Container>
-)
+export const Default: Story = (args) => <ContentCard {...args} />
 
 Default.args = {
   eyebrow: 'Eyebrow',
@@ -76,7 +91,7 @@ Default.args = {
   text:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis tempor vestibulum. Integer rutrum in lectus nec accumsan. Nulla ultricies convallis justo non tempor. Maecenas posuere imperdiet dictum. Donec luctus ex eu imperdiet finibus. Quisque placerat, nunc luctus pellentesque placerat, est est fringilla ante, id facilisis nunc enim at tellus.',
   alignText: 'right',
-  bgColor: 'white',
+  bgColor: 'transparent',
   textColor: '',
   classContainer: '',
   urlImgTopic1: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607895219/images-default/iconHouse_vwnc0f.png`,
