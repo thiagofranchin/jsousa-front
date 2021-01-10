@@ -8,7 +8,7 @@ export const Wrapper = styled.footer`
 `
 
 export const MenuButton = styled.li`
-  border-bottom: 1px solid #15b1d7;
+  border-bottom: 1px solid;
   &.active {
     a {
       font-weight: bold;

@@ -44,7 +44,11 @@ const Header = ({ classComponent }: Props) => (
           />
         </div>
         <div className="col-12">
-          <MainMenu bgColorMenu="transparent" classComponent="border-top" />
+          <MainMenu
+            bgColorMenu="transparent"
+            classComponent="border-top"
+            colorTextMenu="primary"
+          />
         </div>
       </Container>
     </header>

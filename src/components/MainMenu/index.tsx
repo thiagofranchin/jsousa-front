@@ -1,16 +1,28 @@
-import * as S from './styles'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Menu } from '@styled-icons/boxicons-regular/Menu'
 import Logo from '../Logo'
 
 import mainMenu from './content'
 
-type Props = {
+import * as S from './styles'
+
+type MainProps = {
   classComponent?: string
   bgColorMenu?: string
   colorTextMenu?: string
+  bgLinkActiveColor?: string
 }
 
-const MainMenu = ({ classComponent, bgColorMenu, colorTextMenu }: Props) => {
+const MainMenu = ({
+  classComponent,
+  bgColorMenu,
+  colorTextMenu,
+  bgLinkActiveColor
+}: MainProps) => {
+  const router = useRouter()
+  const currentPage = router.pathname
+
   return (
     <S.Wrapper className={classComponent ? classComponent : ''}>
       <nav
@@ -38,17 +50,21 @@ const MainMenu = ({ classComponent, bgColorMenu, colorTextMenu }: Props) => {
           <ul className="navbar-nav">
             {mainMenu.map(({ label, url }, index) => (
               <S.MenuButton
-                className={`nav-item ${index == 0 ? 'active' : ''}`}
+                bgColorLink={bgLinkActiveColor}
+                className={`nav-item ${url == currentPage ? 'active' : ''} ${
+                  colorTextMenu ? `text-${colorTextMenu}` : 'text-primary'
+                }`}
                 key={index}
               >
-                <a
-                  className={`nav-link ${
-                    colorTextMenu ? `text-${colorTextMenu}` : ''
-                  }`}
-                  href={url}
-                >
-                  {label}
-                </a>
+                <Link href={url}>
+                  <a
+                    className={`nav-link ${
+                      colorTextMenu ? `text-${colorTextMenu}` : ''
+                    } `}
+                  >
+                    {label}
+                  </a>
+                </Link>
               </S.MenuButton>
             ))}
           </ul>
