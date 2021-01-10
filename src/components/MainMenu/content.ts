@@ -1,15 +1,19 @@
 const mainMenu = [
   {
-    label: 'Link 1',
-    url: 'https://www.google.com.br'
+    label: 'Home',
+    url: '/'
   },
   {
-    label: 'Link 2',
-    url: 'https://www.google.com.br'
+    label: 'About',
+    url: '/about'
   },
   {
-    label: 'Link 3',
-    url: 'https://www.google.com.br'
+    label: 'Services',
+    url: '/services'
+  },
+  {
+    label: 'Contact',
+    url: '/contact'
   }
 ]
 
