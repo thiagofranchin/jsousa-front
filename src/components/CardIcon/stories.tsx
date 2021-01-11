@@ -17,6 +17,7 @@ export default {
           'info',
           'warning',
           'danger',
+          'super-light',
           'light',
           'dark'
         ]

@@ -1,14 +1,15 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import MainMenu from '.'
+import ContentCardTabs from '.'
 
 export default {
-  title: 'MainMenu',
-  component: MainMenu,
+  title: 'ContentCardTabs',
+  component: ContentCardTabs,
   argTypes: {
-    bgColorMenu: {
+    bgColor: {
       control: {
         type: 'select',
         options: [
+          'transparent',
           'white',
           'primary',
           'secondary',
@@ -22,10 +23,11 @@ export default {
         ]
       }
     },
-    colorTextMenu: {
+    borderColor: {
       control: {
         type: 'select',
         options: [
+          'transparent',
           'white',
           'primary',
           'secondary',
@@ -42,4 +44,4 @@ export default {
   }
 } as Meta
 
-export const Default: Story = (args) => <MainMenu {...args} />
+export const Default: Story = (args) => <ContentCardTabs {...args} />
