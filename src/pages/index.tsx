@@ -35,7 +35,7 @@ export default function Home() {
           altImage="Woman with some cleaning productss"
           altImgTopic1="Woman with some cleaning productss"
           altImgTopic2="Woman with some cleaning productss"
-          bgColor="light"
+          bgColor="super-light"
           classContainer=""
           contentIsFluid={false}
           eyebrow="Eyebrow"

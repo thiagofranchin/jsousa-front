@@ -56,7 +56,7 @@ const MainMenu = ({
                 }`}
                 key={index}
               >
-                <Link href={url}>
+                <Link href={url} prefetch={false}>
                   <a
                     className={`nav-link ${
                       colorTextMenu ? `text-${colorTextMenu}` : ''

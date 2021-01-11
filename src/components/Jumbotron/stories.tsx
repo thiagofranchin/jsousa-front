@@ -22,6 +22,7 @@ export default {
           'info',
           'warning',
           'danger',
+          'super-light',
           'light',
           'dark'
         ]
@@ -38,6 +39,7 @@ export default {
           'info',
           'warning',
           'danger',
+          'super-light',
           'light',
           'dark'
         ]
