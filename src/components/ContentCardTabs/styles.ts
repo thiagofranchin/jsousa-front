@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-interface NavLinkWrapperProps {
-  activeBtnColor?: string
-}
+// interface NavLinkWrapperProps {
+//   activeBtnColor?: string
+// }
 
 export const Wrapper = styled.main`
   .tab-content > .tab-pane {
@@ -21,11 +21,6 @@ export const Wrapper = styled.main`
 
     svg {
       margin-top: -2px;
-    }
-
-    &.active {
-      background-color: ${(props: NavLinkWrapperProps) =>
-        props.activeBtnColor ? props.activeBtnColor : '#15b1d7'};
     }
   }
   .image-item {

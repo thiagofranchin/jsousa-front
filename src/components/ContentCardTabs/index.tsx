@@ -10,7 +10,6 @@ type ContentCardTabsProps = {
   contentIsFluid?: boolean
   borderColor?: string
   labelButtonColor?: string
-  bgButtonActiveColor?: string
 }
 
 const ContentCardTabs = ({
@@ -18,8 +17,7 @@ const ContentCardTabs = ({
   bgColor,
   contentIsFluid,
   borderColor,
-  labelButtonColor,
-  bgButtonActiveColor
+  labelButtonColor
 }: ContentCardTabsProps) => (
   <S.Wrapper
     className={`content-card-tabs ${classComponent ? classComponent : ''} ${
@@ -78,7 +76,6 @@ const ContentCardTabs = ({
               role="tab"
               aria-controls={`v-pills-${index}`}
               aria-selected={index == 0 ? 'true' : 'false'}
-              activeBtnColor={bgButtonActiveColor}
             >
               <AngleRight width="8" className="mr-2" /> {labelButton}
             </a>
