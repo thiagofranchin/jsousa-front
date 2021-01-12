@@ -13,6 +13,7 @@ $gray:             #b5b5b5;
 $gray-medium:      #676767;
 $gray-dark:        #2f343b;
 $dark:             #222222;
+$super-dark:       #181818;
 
 $theme-colors: ();
 $theme-colors: map-merge(
@@ -26,6 +27,7 @@ $theme-colors: map-merge(
     "super-light":      $gray-super-light,
     "light":            $gray-light,
     "dark":             $dark,
+    "super-dark":       $super-dark,
     "blue-light":       $blue-light,
     "blue":             $blue,
     "blue-medium":      $blue-medium,

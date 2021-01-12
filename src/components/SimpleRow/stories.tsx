@@ -1,20 +1,40 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import HeroSmall from '.'
+import SimpleRow from '.'
 
 export default {
-  title: 'HeroSmall',
-  component: HeroSmall,
+  title: 'SimpleRow',
+  component: SimpleRow,
   argTypes: {
-    alignText: {
+    textAlign: {
       control: {
         type: 'select',
         options: ['left', 'center', 'right']
+      }
+    },
+    textColor: {
+      control: {
+        type: 'select',
+        options: [
+          'transparent',
+          'white',
+          'primary',
+          'secondary',
+          'success',
+          'info',
+          'warning',
+          'danger',
+          'super-light',
+          'light',
+          'dark',
+          'super-dark'
+        ]
       }
     },
     bgColor: {
       control: {
         type: 'select',
         options: [
+          'transparent',
           'white',
           'primary',
           'secondary',
@@ -29,28 +49,11 @@ export default {
         ]
       }
     },
-    colorTitle: {
+    borderColor: {
       control: {
         type: 'select',
         options: [
-          'white',
-          'primary',
-          'secondary',
-          'success',
-          'info',
-          'warning',
-          'danger',
-          'super-light',
-          'light',
-          'dark',
-          'super-dark'
-        ]
-      }
-    },
-    colorSubTitle: {
-      control: {
-        type: 'select',
-        options: [
+          'transparent',
           'white',
           'primary',
           'secondary',
@@ -68,16 +71,8 @@ export default {
   }
 } as Meta
 
-export const Default: Story = (args) => {
-  return <HeroSmall {...args} />
-}
-
+export const Default: Story = (args) => <SimpleRow {...args} />
 Default.args = {
-  title: 'Title',
-  subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  colorTitle: 'white',
-  colorSubTitle: 'white',
-  bgColor: 'primary',
-  bgImageUrl:
-    'https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607444937/images-default/hero-small_ejdysb.jpg'
+  text: '© J. Sousa Cleaning Services 2021 | All rights reserved.',
+  classComponent: 'py-3'
 }
