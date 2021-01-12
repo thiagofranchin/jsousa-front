@@ -18,7 +18,8 @@ export default {
           'danger',
           'super-light',
           'light',
-          'dark'
+          'dark',
+          'super-dark'
         ]
       }
     },

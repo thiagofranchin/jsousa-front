@@ -5,7 +5,7 @@ export default {
   title: 'Jumbotron',
   component: Jumbotron,
   argTypes: {
-    alignText: {
+    textAlign: {
       control: {
         type: 'select',
         options: ['left', 'center', 'right']
@@ -24,7 +24,8 @@ export default {
           'danger',
           'super-light',
           'light',
-          'dark'
+          'dark',
+          'super-dark'
         ]
       }
     },
@@ -41,7 +42,8 @@ export default {
           'danger',
           'super-light',
           'light',
-          'dark'
+          'dark',
+          'super-dark'
         ]
       }
     }
@@ -54,7 +56,7 @@ Default.args = {
   title: 'Title',
   text:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis tempor vestibulum. Integer rutrum in lectus nec accumsan. Nulla ultricies convallis justo non tempor. Maecenas posuere imperdiet dictum. Donec luctus ex eu imperdiet finibus. Quisque placerat, nunc luctus pellentesque placerat, est est fringilla ante, id facilisis nunc enim at tellus.',
-  alignText: '',
+  textAlign: '',
   textColor: 'white',
   bgColor: 'primary',
   classContainer: '',

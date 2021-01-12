@@ -3,7 +3,7 @@ import * as S from './styles'
 type Props = {
   title?: string
   text?: string
-  alignText?: string
+  textAlign?: string
   bgColor?: string
   textColor?: string
   classContainer?: string
@@ -13,7 +13,7 @@ type Props = {
 const Jumbotron = ({
   title,
   text,
-  alignText,
+  textAlign,
   bgColor,
   textColor,
   classContainer,
@@ -27,7 +27,7 @@ const Jumbotron = ({
   >
     <div
       className={`container${contentIsFluid ? '-fluid' : ''}
-      ${alignText ? `text-${alignText}` : ''}
+      ${textAlign ? `text-${textAlign}` : ''}
       ${classContainer ? classContainer : ''}
       `}
     >
