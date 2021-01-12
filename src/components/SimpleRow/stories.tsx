@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import Copyright from '.'
+import SimpleRow from '.'
 
 export default {
-  title: 'Copyright',
-  component: Copyright,
+  title: 'SimpleRow',
+  component: SimpleRow,
   argTypes: {
     textAlign: {
       control: {
@@ -71,7 +71,8 @@ export default {
   }
 } as Meta
 
-export const Default: Story = (args) => <Copyright {...args} />
+export const Default: Story = (args) => <SimpleRow {...args} />
 Default.args = {
-  text: '© J. Sousa Cleaning Services 2021 | All rights reserved.'
+  text: '© J. Sousa Cleaning Services 2021 | All rights reserved.',
+  classComponent: 'py-3'
 }

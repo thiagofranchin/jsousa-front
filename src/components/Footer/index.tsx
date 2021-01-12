@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Container from '../Container'
 import Logo from '../Logo'
 import SocialMedia from '../SocialMedia'
-import Copyright from '../Copyright'
+import SimpleRow from '../SimpleRow'
 
 import * as S from './styles'
 
@@ -82,9 +82,11 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
           </div>
         </Container>
       </S.Wrapper>
-      <Container isFluid={true}>
-        <Copyright text="© J. Sousa Cleaning Services 2021 | All rights reserved." />
-      </Container>
+      <SimpleRow
+        contentIsFluid={true}
+        classComponent="py-3"
+        text="© J. Sousa Cleaning Services 2021 | All rights reserved."
+      />
     </>
   )
 }
