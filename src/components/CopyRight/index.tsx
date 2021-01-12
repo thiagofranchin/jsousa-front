@@ -27,7 +27,7 @@ const Copyright = ({
         textColor ? `text-${textColor}` : 'text-white'
       } mb-0`}
     >
-      {text}
+      {text && text}
     </p>
   </S.Wrapper>
 )
