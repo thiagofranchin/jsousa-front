@@ -82,7 +82,7 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
         </Container>
       </S.Wrapper>
       <Container isFluid={true}>
-        <Copyright />
+        <Copyright text="© J. Sousa Cleaning Services 2021 | All rights reserved." />
       </Container>
     </>
   )
