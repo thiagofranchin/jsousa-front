@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
+import Container from '../Container'
 import Logo from '../Logo'
 import SocialMedia from '../SocialMedia'
 import Copyright from '../Copyright'
-import Container from '../Container'
 
 import * as S from './styles'
 
