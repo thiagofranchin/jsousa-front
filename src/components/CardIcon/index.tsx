@@ -1,5 +1,6 @@
 import { Clock } from '@styled-icons/bootstrap/Clock'
 import { TelephoneFill } from '@styled-icons/bootstrap/TelephoneFill'
+import { MessageRoundedDetail } from '@styled-icons/boxicons-regular/MessageRoundedDetail'
 
 import * as S from './styles'
 
@@ -11,6 +12,8 @@ type Props = {
   cardRightText?: string
   colorIcon?: string
   sizeIcon?: number
+  numberWhatsapp?: number
+  textWhatsapp?: string
 }
 
 const CardIcon = ({
@@ -20,7 +23,9 @@ const CardIcon = ({
   cardRightTitle,
   cardRightText,
   colorIcon,
-  sizeIcon = 40
+  sizeIcon = 40,
+  numberWhatsapp = 5519991179535,
+  textWhatsapp = 'Welcome the J. Sousa Cleaning Service. Leave a message and we will reply as soon as possible.'
 }: Props) => (
   <>
     <div className="col-6">
@@ -63,7 +68,24 @@ const CardIcon = ({
               <S.TitleCard className="mt-0">
                 {cardRightTitle ? cardRightTitle : ''}
               </S.TitleCard>
-              <S.TextCard>{cardRightText ? cardRightText : ''}</S.TextCard>
+              <a
+                href={`https://api.whatsapp.com/send?phone=${numberWhatsapp}${
+                  textWhatsapp && `&text=${textWhatsapp}`
+                }`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <S.TextCard
+                  className="text-dark"
+                  title="Click to send a message"
+                >
+                  {cardRightText ? cardRightText : ''}
+                  <MessageRoundedDetail
+                    width="19"
+                    className={`ml-1 ${colorIcon ? `text-${colorIcon}` : ''}`}
+                  />
+                </S.TextCard>
+              </a>
             </div>
           </div>
         </div>

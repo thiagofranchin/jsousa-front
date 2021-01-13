@@ -22,7 +22,7 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
   return (
     <>
       <S.Wrapper
-        className={`footer py-5 bg-dark text-white ${
+        className={`footer pt-5 pb-2 pb-md-5 bg-dark text-white ${
           classComponent ? classComponent : ''
         }`}
       >
@@ -78,7 +78,14 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
               cumque ab earum soluta nihil quam incidunt, necessitatibus
               nesciunt esse quo, fuga itaque.
             </p>
-            <SocialMedia widthIcon={30} />
+            <SocialMedia
+              widthIcon={30}
+              classComponent="pt-3 pt-md-1"
+              titleFacebook="Follow us on Facebook"
+              titleInstagram="Follow us on Instagram"
+              urlFacebook="https://www.facebook.com/"
+              urlInstagram="https://www.instagram.com/"
+            />
           </div>
         </Container>
       </S.Wrapper>

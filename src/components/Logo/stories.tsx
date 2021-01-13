@@ -19,5 +19,9 @@ export const Default: Story = (args) => {
 }
 
 Default.args = {
-  widthLogo: `300`
+  widthLogo: `250`,
+  urlImage:
+    'https://res.cloudinary.com/jsousacleaningservices/image/upload/v1608359292/images-default/jsousa-logo_iydyye.svg',
+  urlImageMobile:
+    'https://res.cloudinary.com/jsousacleaningservices/image/upload/v1609627797/images-default/jsousa-logo_white_j8tfvg.svg'
 }
