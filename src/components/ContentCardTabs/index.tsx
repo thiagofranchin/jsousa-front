@@ -25,7 +25,7 @@ const ContentCardTabs = ({
     }`}
   >
     <Container isFluid={contentIsFluid ? contentIsFluid : false}>
-      <div className="col-9">
+      <div className="col-md-9">
         <div className="tab-content" id="v-pills-tabContent">
           {contentCardTabs.map(({ imageUrl, text }, index) => (
             <div
@@ -57,7 +57,7 @@ const ContentCardTabs = ({
           ))}
         </div>
       </div>
-      <div className="col-3">
+      <div className="col-md-3">
         <div
           className="nav flex-column nav-pills"
           id="v-pills-tab"

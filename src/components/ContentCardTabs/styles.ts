@@ -18,6 +18,7 @@ export const Wrapper = styled.main`
     border-bottom-style: dotted;
     border-color: gray;
     margin-bottom: 3px;
+    width: 100%;
 
     svg {
       margin-top: -2px;

@@ -48,9 +48,10 @@ export const ContentCardTextList = styled.div`
     img {
       width: 50px;
       height: 50px;
+      margin-right: 15px;
     }
+
     p {
-      margin-left: 15px;
       font-size: 1.1rem;
       line-height: 1.5rem;
       align-self: flex-end;
@@ -59,9 +60,24 @@ export const ContentCardTextList = styled.div`
 `
 export const ContentCardLink = styled.a`
   &.content-card-link {
-    position: relative;
     display: inline-block;
-    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
     margin-top: 15px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    svg {
+      margin-left: 3px;
+      margin-top: -3px;
+      transition: margin-left 0.2s;
+    }
+
+    &:hover {
+      svg {
+        margin-left: 10px;
+      }
+    }
   }
 `

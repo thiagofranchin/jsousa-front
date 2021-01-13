@@ -33,7 +33,7 @@ const CardRowSimple = ({
       isFluid={contentIsFluid ? contentIsFluid : false}
       classContainer={classComponent ? classComponent : ''}
     >
-      <div className="col-md-6 mb-4 mb-lg-0">
+      <div className="col-md-6">
         <S.Wrapper>
           <div className="row no-gutters position-relative">
             <div className="col-md-6 p-md-4">
@@ -52,7 +52,7 @@ const CardRowSimple = ({
           </div>
         </S.Wrapper>
       </div>
-      <div className="col-md-6 mb-4 mb-lg-0 ">
+      <div className="col-md-6">
         <S.Wrapper>
           <div className="row no-gutters position-relative">
             <div className="col-md-6 p-md-4">

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Menu } from '@styled-icons/boxicons-regular/Menu'
 import Logo from '../Logo'
+import SocialMedia from '../SocialMedia'
 
 import mainMenu from './content'
 
@@ -11,6 +12,7 @@ type MainProps = {
   classComponent?: string
   bgColorMenu?: string
   colorTextMenu?: string
+  colorMenuIcon?: string
   bgLinkActiveColor?: string
 }
 
@@ -18,6 +20,7 @@ const MainMenu = ({
   classComponent,
   bgColorMenu,
   colorTextMenu,
+  colorMenuIcon,
   bgLinkActiveColor
 }: MainProps) => {
   const router = useRouter()
@@ -27,7 +30,7 @@ const MainMenu = ({
     <S.Wrapper className={classComponent ? classComponent : ''}>
       <nav
         className={`navbar navbar-expand-md ${
-          bgColorMenu ? `bg-${bgColorMenu}` : 'bg-light'
+          bgColorMenu ? `bg-${bgColorMenu}` : 'bg-dark'
         }`}
       >
         <a className="navbar-brand d-md-none" href="/">
@@ -43,11 +46,32 @@ const MainMenu = ({
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon">
-            <Menu width="30" />
+            <Menu
+              width="30"
+              className={
+                colorMenuIcon ? `text-${colorMenuIcon}` : 'text-primary'
+              }
+            />
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
+            <li
+              className={`nav-item ${
+                colorTextMenu ? `text-${colorTextMenu}` : 'text-primary'
+              }`}
+            >
+              <SocialMedia
+                alignIcon="center"
+                colorIcon="primary"
+                titleFacebook="Follow us on Facebook"
+                titleInstagram="Follow us on Instagram"
+                urlFacebook="https://www.facebook.com/"
+                urlInstagram="https://www.instagram.com/"
+                widthIcon={30}
+                classComponent="pl-3 pr-2 mt-2 d-md-none"
+              />
+            </li>
             {mainMenu.map(({ label, url }, index) => (
               <S.MenuButton
                 bgColorLink={bgLinkActiveColor}

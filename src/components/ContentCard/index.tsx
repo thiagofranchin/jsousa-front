@@ -101,12 +101,20 @@ const ContentCard = ({
             </p>
 
             <S.ContentCardTextList className="content-card-text-list">
-              <img src={urlImgTopic1} alt={altImgTopic1} />
+              {urlImgTopic1 && (
+                <img
+                  src={urlImgTopic1}
+                  alt={altImgTopic1}
+                  className="svg-primary"
+                />
+              )}
+
               <p>{textTopic1}</p>
             </S.ContentCardTextList>
 
             <S.ContentCardTextList className="content-card-text-list">
-              <img src={urlImgTopic2} alt={altImgTopic2} />
+              {urlImgTopic2 && <img src={urlImgTopic2} alt={altImgTopic2} />}
+
               <p>{textTopic2}</p>
             </S.ContentCardTextList>
             <S.ContentCardLink
@@ -115,7 +123,8 @@ const ContentCard = ({
               }`}
               href={linkUrl}
             >
-              {linkText} <DoubleArrow width="16" aria-hidden="true" />
+              {linkText}
+              <DoubleArrow width="18" aria-hidden="true" />
             </S.ContentCardLink>
           </S.ContentCardColumnWrapper>
         </S.ContentCardRowWrapper>

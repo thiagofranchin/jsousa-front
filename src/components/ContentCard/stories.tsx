@@ -102,11 +102,11 @@ Default.args = {
   bgColor: 'transparent',
   textColor: '',
   classContainer: '',
-  urlImgTopic1: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607895219/images-default/iconHouse_vwnc0f.png`,
+  urlImgTopic1: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1610506244/images-default/iconHouse_hm1mli.svg`,
   altImgTopic1: 'Woman with some cleaning productss',
   textTopic1:
     'We offer a flat-rate pricing for our weekly biweekly or monthly residential cleaning service wWhether',
-  urlImgTopic2: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607895219/images-default/iconHouse2_pubhex.png`,
+  urlImgTopic2: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1610506244/images-default/iconHeart_og4jub.svg`,
   altImgTopic2: 'Woman with some cleaning productss',
   textTopic2: 'We offer a flat-rate pricing for our weekly biweekly',
   urlImage: `https://res.cloudinary.com/jsousacleaningservices/image/upload/v1606274341/images-default/image-content-card-1_h7qi0w.jpg`,
