@@ -1,3 +1,4 @@
+import Container from '../Container'
 import * as S from './styles'
 import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare'
 import { Instagram } from '@styled-icons/boxicons-logos/Instagram'
@@ -17,17 +18,56 @@ type Props = {
 
 const Icons = ({ colorIcon = '#28B0D1' }: Props) => (
   <S.Wrapper>
-    <FacebookSquare width="50" color={colorIcon} />
-    <Instagram width="50" color={colorIcon} />
-    <Phone width="50" color={colorIcon} />
-    <MessageRoundedDetail width="50" color={colorIcon} />
-    <AngleLeft width="25" color={colorIcon} />
-    <AngleRight width="25" color={colorIcon} />
-    <Clock width="30" color={colorIcon} />
-    <Telephone width="30" color={colorIcon} />
-    <TelephoneFill width="30" color={colorIcon} />
-    <Menu width="30" color={colorIcon} />
-    <DoubleArrow width="10" aria-hidden="true" />
+    <Container isFluid={true}>
+      <div className="col-4">
+        <table className="table table-bordered table-dark text-center">
+          <tbody>
+            <tr>
+              <th scope="row">
+                <FacebookSquare width="40" color={colorIcon} />
+              </th>
+              <td>
+                <Instagram width="40" color={colorIcon} />
+              </td>
+              <td>
+                <Phone width="40" color={colorIcon} />
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">
+                <MessageRoundedDetail width="40" color={colorIcon} />
+              </td>
+              <td>
+                <AngleLeft width="25" color={colorIcon} />
+              </td>
+              <td>
+                <AngleRight width="25" color={colorIcon} />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <Clock width="30" color={colorIcon} />
+              </th>
+              <td>
+                <Telephone width="30" color={colorIcon} />
+              </td>
+              <td>
+                <TelephoneFill width="30" color={colorIcon} />
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">
+                <Menu width="40" color={colorIcon} />
+              </td>
+              <td>
+                <DoubleArrow width="40" color={colorIcon} />
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Container>
   </S.Wrapper>
 )
 

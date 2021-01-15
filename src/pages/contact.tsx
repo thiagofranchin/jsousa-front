@@ -6,7 +6,7 @@ export default function Contact() {
     <>
       <Layout>
         <HeroSmall
-          bgColor="primary"
+          bgColor="light"
           bgImageUrl="https://res.cloudinary.com/jsousacleaningservices/image/upload/v1607444937/images-default/hero-small_ejdysb.jpg"
           title="Contact Us"
           colorTitle="primary"

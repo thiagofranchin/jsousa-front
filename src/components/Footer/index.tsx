@@ -17,7 +17,13 @@ type Props = {
 
 const Footer = ({ classComponent, colorTextMenu }: Props) => {
   const router = useRouter()
-  const currentPage = router.pathname
+  let currentPage = ''
+
+  if (router == null) {
+    currentPage = '/'
+  } else {
+    currentPage = router.pathname
+  }
 
   return (
     <>
@@ -49,7 +55,7 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
                   }`}
                   key={index}
                 >
-                  <Link href={url}>
+                  <Link href={url} prefetch={false}>
                     <a
                       className={`nav-link ${
                         colorTextMenu ? `text-${colorTextMenu}` : ''

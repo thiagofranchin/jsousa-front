@@ -24,7 +24,13 @@ const MainMenu = ({
   bgLinkActiveColor
 }: MainProps) => {
   const router = useRouter()
-  const currentPage = router.pathname
+  let currentPage = ''
+
+  if (router == null) {
+    currentPage = '/'
+  } else {
+    currentPage = router.pathname
+  }
 
   return (
     <S.Wrapper className={classComponent ? classComponent : ''}>
