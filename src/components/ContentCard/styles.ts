@@ -44,17 +44,20 @@ export const ContentCardEyeBrow = styled.span`
 export const ContentCardTextList = styled.div`
   &.content-card-text-list {
     display: flex;
+    margin-bottom: 15px;
 
     img {
       width: 50px;
       height: 50px;
       margin-right: 15px;
+      align-self: center;
     }
 
     p {
       font-size: 1.1rem;
       line-height: 1.5rem;
-      align-self: flex-end;
+      align-self: center;
+      margin-bottom: 0;
     }
   }
 `
