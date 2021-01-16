@@ -28,7 +28,6 @@ export default function Services() {
           textCard2="Lorem ipsum dolor sit amet consectetur adipiscing elited hasellus. "
           textCard3="Lorem ipsum dolor sit amet consectetur adipiscing elited hasellus."
         />
-
         <ContentCard
           alignText="left"
           altImage="Woman with some cleaning productss"

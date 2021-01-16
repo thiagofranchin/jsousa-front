@@ -18,7 +18,7 @@ export default function Contact() {
           bgColor="super-light"
           contentIsFluid={false}
           eyebrow="Get In Touch"
-          eyebrowLinkColor="warning"
+          eyebrowLinkColor="primary"
           text="<p>Business conse ctetur adipi sicing elite after smod tempor incid idunt ut labore et dolore magna business rem</p>
           <div class='ckeditor-list-wrapper'>
           <div class='ckeditor-list'>
