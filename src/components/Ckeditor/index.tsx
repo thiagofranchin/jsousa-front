@@ -2,32 +2,34 @@ import Container from '../Container'
 import * as S from './styles'
 
 type Props = {
+  bgColor?: string
+  classComponent?: string
+  contentIsFluid?: boolean
   eyebrow?: string
   eyebrowLinkColor?: string
-  title?: string
   text?: string
-  bgColor?: string
   textColor?: string
-  classContainer?: string
-  contentIsFluid?: boolean
+  title?: string
 }
 const Ckeditor = ({
+  bgColor,
+  classComponent,
+  contentIsFluid,
   eyebrow,
   eyebrowLinkColor,
-  title,
   text,
-  bgColor,
-  contentIsFluid,
   textColor,
-  classContainer
+  title
 }: Props) => (
   <div className={bgColor ? `bg-${bgColor}` : 'bg-transparent'}>
-    <Container isFluid={contentIsFluid ? contentIsFluid : false}>
+    <Container
+      isFluid={contentIsFluid ? contentIsFluid : false}
+      classContainer={classComponent ? classComponent : ''}
+    >
       <S.CkeditorWrapper
         className={`jumbotron
       ${bgColor ? `bg-${bgColor}` : 'bg-transparent'}
       ${textColor ? `text-${textColor}` : ''}
-      ${classContainer ? `text-${classContainer}` : ''}
     `}
       >
         <S.CkeditorRowWrapper className={`d-flex row`}>

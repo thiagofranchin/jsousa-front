@@ -7,7 +7,6 @@ export default function PrivacyPolicy() {
       <Layout>
         <Ckeditor
           bgColor="super-light"
-          classContainer=""
           contentIsFluid={false}
           eyebrow=""
           eyebrowLinkColor="primary"

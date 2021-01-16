@@ -16,7 +16,6 @@ export default function Contact() {
         />
         <Ckeditor
           bgColor="super-light"
-          classContainer=""
           contentIsFluid={false}
           eyebrow="Get In Touch"
           eyebrowLinkColor="warning"

@@ -7,7 +7,6 @@ export default function CookiePolicy() {
       <Layout>
         <Ckeditor
           bgColor="super-light"
-          classContainer=""
           contentIsFluid={false}
           eyebrow="Privacy Policy"
           eyebrowLinkColor="primary"
