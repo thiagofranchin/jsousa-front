@@ -1,0 +1,70 @@
+import Container from '../Container'
+import {
+  ReactCompareSlider,
+  ReactCompareSliderImage
+} from 'react-compare-slider'
+
+import * as S from './styles'
+
+import beforeAfter from './content'
+
+type Props = {
+  badgeColor?: string
+  bgColor?: string
+  borderColor?: string
+  classComponent?: string
+  contentIsFluid?: boolean
+  positionLine?: number
+}
+
+const BeforeAfter = ({
+  badgeColor,
+  bgColor,
+  borderColor,
+  classComponent,
+  contentIsFluid,
+  positionLine
+}: Props) => (
+  <S.Wrapper
+    className={`before-after ${classComponent ? classComponent : ''} ${
+      bgColor ? `bg-${bgColor}` : 'bg-transparent'
+    }`}
+  >
+    <Container
+      isFluid={contentIsFluid ? contentIsFluid : false}
+      classContainer={classComponent ? classComponent : ''}
+    >
+      {beforeAfter.map(({ category, imageUrl1, imageUrl2 }, index) => (
+        <div className="col-md-4 mb-5" key={index}>
+          <S.CardWrapper
+            className={`card ${
+              borderColor ? `border-${borderColor}` : 'border-primary'
+            } `}
+          >
+            <ReactCompareSlider
+              className="card-img"
+              position={positionLine}
+              itemOne={
+                <ReactCompareSliderImage src={imageUrl1} alt="Image one" />
+              }
+              itemTwo={
+                <ReactCompareSliderImage src={imageUrl2} alt="Image two" />
+              }
+            />
+            <S.CardImageOverlayWrapper className="card-img-overlay">
+              <span
+                className={`card-title badge badge-pill ${
+                  badgeColor ? `badge-${badgeColor}` : 'badge-primary'
+                } `}
+              >
+                {category}
+              </span>
+            </S.CardImageOverlayWrapper>
+          </S.CardWrapper>
+        </div>
+      ))}
+    </Container>
+  </S.Wrapper>
+)
+
+export default BeforeAfter
