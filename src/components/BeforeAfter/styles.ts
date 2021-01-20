@@ -20,3 +20,36 @@ export const CardWrapper = styled.div`
   border-style: inset;
   border-block-style: none;
 `
+
+export const CardRowHeader = styled.div`
+  padding-bottom: 50px;
+
+  @media (min-width: 768px) {
+    p {
+      padding: 0 100px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    p {
+      padding: 0 200px;
+    }
+  }
+`
+
+export const CardRowTitle = styled.h2`
+  text-align: center;
+`
+
+export const Divider = styled.div`
+  border-top: 1px solid #222222;
+  height: 0px;
+  margin: 35px auto;
+  width: 100px;
+`
+
+export const CardRowParagraph = styled.p`
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+`

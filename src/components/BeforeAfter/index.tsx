@@ -15,6 +15,8 @@ type Props = {
   classComponent?: string
   contentIsFluid?: boolean
   positionLine?: number
+  titleSection?: string
+  subTitleSection?: string
 }
 
 const BeforeAfter = ({
@@ -23,7 +25,9 @@ const BeforeAfter = ({
   borderColor,
   classComponent,
   contentIsFluid,
-  positionLine
+  positionLine,
+  titleSection,
+  subTitleSection
 }: Props) => (
   <S.Wrapper
     className={`before-after ${classComponent ? classComponent : ''} ${
@@ -34,8 +38,20 @@ const BeforeAfter = ({
       isFluid={contentIsFluid ? contentIsFluid : false}
       classContainer={classComponent ? classComponent : ''}
     >
+      <S.CardRowHeader className={`col-md-12`}>
+        {titleSection && (
+          <>
+            <S.CardRowTitle>{titleSection}</S.CardRowTitle>
+            <S.Divider />
+          </>
+        )}
+        {subTitleSection && (
+          <S.CardRowParagraph>{subTitleSection}</S.CardRowParagraph>
+        )}
+      </S.CardRowHeader>
+
       {beforeAfter.map(({ category, imageUrl1, imageUrl2 }, index) => (
-        <div className="col-md-4 mb-5" key={index}>
+        <div className="col-md-4 mb-5 mb-md-0" key={index}>
           <S.CardWrapper
             className={`card ${
               borderColor ? `border-${borderColor}` : 'border-primary'

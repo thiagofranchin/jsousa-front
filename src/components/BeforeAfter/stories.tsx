@@ -68,5 +68,7 @@ export default {
 export const Default: Story = (args) => <BeforeAfter {...args} />
 Default.args = {
   positionLine: 75,
-  classComponent: 'py-4'
+  classComponent: 'py-4',
+  titleSection: 'Before and After',
+  subTitleSection: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
 }

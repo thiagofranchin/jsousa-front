@@ -3,6 +3,7 @@ import Carousel from '../components/Carousel'
 import CardRow from '../components/CardRow'
 import ContentCard from '../components/ContentCard'
 import Jumbotron from '../components/Jumbotron'
+import BeforeAfter from '../components/BeforeAfter'
 
 export default function Services() {
   return (
@@ -57,6 +58,12 @@ export default function Services() {
           bgColor="primary"
           classContainer=""
           contentIsFluid={false}
+        />
+        <BeforeAfter
+          classComponent="pb-5 pt-4"
+          positionLine={75}
+          titleSection="Before and After"
+          subTitleSection="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis tempor vestibulum. Integer rutrum in lectus nec accumsan. Nulla ultricies convallis justo non tempor."
         />
       </Layout>
     </>
