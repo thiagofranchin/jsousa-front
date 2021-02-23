@@ -24,12 +24,10 @@ const SocialMedia = ({
   titleInstagram
 }: Props) => (
   <S.Wrapper
-    className={`${classComponent ? classComponent : ''} ${
-      alignIcon ? `text-${alignIcon}` : ''
-    }`}
+    className={`${classComponent} ${alignIcon && `text-${alignIcon}`}`}
   >
     <a
-      className={colorIcon ? `text-${colorIcon}` : ''}
+      className={colorIcon && `text-${colorIcon}`}
       href={urlFacebook}
       title={titleFacebook}
       target="_blank"
@@ -38,7 +36,7 @@ const SocialMedia = ({
       <FacebookSquare width={widthIcon} />
     </a>
     <a
-      className={colorIcon ? `text-${colorIcon}` : ''}
+      className={colorIcon && `text-${colorIcon}`}
       href={urlInstagram}
       title={titleInstagram}
       target="_blank"

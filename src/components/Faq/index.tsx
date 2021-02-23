@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Faq = ({ classComponent, title }: Props) => (
-  <S.Wrapper className={classComponent ? classComponent : ''}>
+  <S.Wrapper className={classComponent}>
     <h1>{title}</h1>
     <S.Divider className="my-4" />
 

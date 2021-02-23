@@ -31,23 +31,21 @@ const CardRowSimple = ({
   <div className={bgColor ? `bg-${bgColor}` : 'bg-transparent'}>
     <Container
       isFluid={contentIsFluid ? contentIsFluid : false}
-      classContainer={classComponent ? classComponent : ''}
+      classContainer={classComponent}
     >
       <div className="col-md-6">
         <S.Wrapper>
           <div className="row no-gutters position-relative">
             <div className="col-md-6 p-md-4">
               <img
-                src={cardLeftUrlImage ? cardLeftUrlImage : ''}
+                src={cardLeftUrlImage}
                 className="w-100"
-                alt={cardLeftAltImage ? cardLeftAltImage : ''}
+                alt={cardLeftAltImage}
               />
             </div>
             <div className="col-md-6 position-static p-4 pl-md-0 text-center text-lg-left">
-              <S.TitleCard className="mt-0">
-                {cardLeftTitle ? cardLeftTitle : ''}
-              </S.TitleCard>
-              <p>{cardLeftText ? cardLeftText : ''}</p>
+              <S.TitleCard className="mt-0">{cardLeftTitle}</S.TitleCard>
+              <p>{cardLeftText}</p>
             </div>
           </div>
         </S.Wrapper>
@@ -57,16 +55,14 @@ const CardRowSimple = ({
           <div className="row no-gutters position-relative">
             <div className="col-md-6 p-md-4">
               <img
-                src={cardRightUrlImage ? cardRightUrlImage : ''}
+                src={cardRightUrlImage}
                 className="w-100"
-                alt={cardRightAltImage ? cardRightAltImage : ''}
+                alt={cardRightAltImage}
               />
             </div>
             <div className="col-md-6 position-static p-4 pl-md-0 text-center text-lg-left">
-              <S.TitleCard className="mt-0">
-                {cardRightTitle ? cardRightTitle : ''}
-              </S.TitleCard>
-              <p>{cardRightText ? cardRightText : ''}</p>
+              <S.TitleCard className="mt-0">{cardRightTitle}</S.TitleCard>
+              <p>{cardRightText}</p>
             </div>
           </div>
         </S.Wrapper>

@@ -60,7 +60,7 @@ export default function Services() {
           contentIsFluid={false}
         />
         <BeforeAfter
-          classComponent="pb-5 pt-4"
+          classComponent="py-5"
           positionLine={75}
           titleSection="Before and After"
           subTitleSection="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis tempor vestibulum. Integer rutrum in lectus nec accumsan. Nulla ultricies convallis justo non tempor."

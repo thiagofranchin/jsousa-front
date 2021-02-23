@@ -42,6 +42,25 @@ export default {
           'super-dark'
         ]
       }
+    },
+    labelButtonColor: {
+      control: {
+        type: 'select',
+        options: [
+          'transparent',
+          'white',
+          'primary',
+          'secondary',
+          'success',
+          'info',
+          'warning',
+          'danger',
+          'super-light',
+          'light',
+          'dark',
+          'super-dark'
+        ]
+      }
     }
   }
 } as Meta

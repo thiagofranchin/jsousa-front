@@ -28,15 +28,13 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
   return (
     <>
       <S.Wrapper
-        className={`footer pt-5 pb-2 pb-md-5 bg-dark text-white ${
-          classComponent ? classComponent : ''
-        }`}
+        className={`footer pt-5 pb-2 pb-md-5 bg-dark text-white ${classComponent}`}
       >
         <Container>
           <div className="col-md-4 mb-4 mb-md-0 text-center text-md-left">
             <Logo
               classComponent="mb-3"
-              urlImage="https://res.cloudinary.com/jsousacleaningservices/image/upload/v1609627797/images-default/jsousa-logo_white_j8tfvg.svg"
+              urlImage="https://res.cloudinary.com/jsousacleaningservices/image/upload/v1614049569/images-default/jsousa-logo-2-light_an9lrx.svg"
             />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
@@ -50,7 +48,7 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
             <ul className="navbar-nav">
               {mainMenu.map(({ label, url }, index) => (
                 <S.MenuButton
-                  className={`nav-item ${url == currentPage ? 'active' : ''} ${
+                  className={`nav-item ${url == currentPage && 'active'} ${
                     colorTextMenu ? `text-${colorTextMenu}` : 'text-primary'
                   }`}
                   key={index}
@@ -58,7 +56,7 @@ const Footer = ({ classComponent, colorTextMenu }: Props) => {
                   <Link href={url} prefetch={false}>
                     <a
                       className={`nav-link ${
-                        colorTextMenu ? `text-${colorTextMenu}` : ''
+                        colorTextMenu && `text-${colorTextMenu}`
                       } `}
                     >
                       {label}

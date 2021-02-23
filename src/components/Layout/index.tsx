@@ -7,7 +7,6 @@ import Footer from '../Footer'
 type Props = {
   children?: ReactNode
   classComponent?: string
-  isFluid?: boolean
 }
 
 const Layout = ({ classComponent, children }: Props) => (

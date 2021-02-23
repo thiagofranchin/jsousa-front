@@ -24,12 +24,12 @@ const Ckeditor = ({
   <div className={bgColor ? `bg-${bgColor}` : 'bg-transparent'}>
     <Container
       isFluid={contentIsFluid ? contentIsFluid : false}
-      classContainer={classComponent ? classComponent : ''}
+      classContainer={classComponent}
     >
       <S.CkeditorWrapper
         className={`jumbotron
       ${bgColor ? `bg-${bgColor}` : 'bg-transparent'}
-      ${textColor ? `text-${textColor}` : ''}
+      ${textColor && `text-${textColor}`}
     `}
       >
         <S.CkeditorRowWrapper className={`d-flex row`}>
@@ -37,18 +37,18 @@ const Ckeditor = ({
             {eyebrow && (
               <S.CkeditorEyeBrow
                 className={`${
-                  eyebrowLinkColor ? `text-${eyebrowLinkColor}` : ''
+                  eyebrowLinkColor && `text-${eyebrowLinkColor}`
                 } text-center text-lg-left py-4 py-lg-0`}
               >
                 <small
                   className={`bor-header ${
-                    eyebrowLinkColor ? `bg-${eyebrowLinkColor}` : ''
+                    eyebrowLinkColor && `bg-${eyebrowLinkColor}`
                   }`}
                 ></small>
                 {eyebrow}
                 <small
                   className={`bor-header bor-right ${
-                    eyebrowLinkColor ? `bg-${eyebrowLinkColor}` : ''
+                    eyebrowLinkColor && `bg-${eyebrowLinkColor}`
                   }`}
                 ></small>
               </S.CkeditorEyeBrow>

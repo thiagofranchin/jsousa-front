@@ -19,13 +19,13 @@ const Feedback = ({ classComponent, bgImageUrl, title, text }: Props) => {
         key={i}
         data-target="#feedbackExampleCaptions"
         data-slide-to={i}
-        className={`${i == 0 ? 'active' : ''}`}
+        className={`${i == 0 && 'active'}`}
       ></li>
     )
   }
   return (
     <S.Wrapper
-      className={`${classComponent ? classComponent : ''}`}
+      className={classComponent}
       style={{ backgroundImage: `url(${bgImageUrl})` }}
     >
       <div className="container">
@@ -41,17 +41,15 @@ const Feedback = ({ classComponent, bgImageUrl, title, text }: Props) => {
               className="carousel slide"
               data-ride="carousel"
             >
-              {feedbackLength > 1 ? (
+              {feedbackLength > 1 && (
                 <ol className="carousel-indicators">{dots}</ol>
-              ) : (
-                ''
               )}
 
               <div className="carousel-inner">
                 {feedbackItems.map(
                   ({ name, feedbackText, role, profileImageUrl }, index) => (
                     <div
-                      className={`carousel-item ${index == 0 ? 'active' : ''}`}
+                      className={`carousel-item ${index == 0 && 'active'}`}
                       key={index}
                     >
                       <S.CarouselContent className="carousel-caption d-block text-left">
@@ -59,33 +57,27 @@ const Feedback = ({ classComponent, bgImageUrl, title, text }: Props) => {
                           <div className="row no-gutters">
                             <div className="col-md-3">
                               <img
-                                src={profileImageUrl ? profileImageUrl : ''}
+                                src={profileImageUrl}
                                 className="card-img"
                                 alt="..."
                               />
                             </div>
                             <div className="col-md-9 text-center text-md-left">
                               <div className="card-body">
-                                {name ? (
+                                {name && (
                                   <h5 className="card-title text-white">
                                     {name}
                                   </h5>
-                                ) : (
-                                  ''
                                 )}
-                                {role ? (
+                                {role && (
                                   <p className="card-text text-white">{role}</p>
-                                ) : (
-                                  ''
                                 )}
                               </div>
                             </div>
-                            {feedbackText ? (
+                            {feedbackText && (
                               <div className="col-12 text-white">
                                 <S.FeedbackText>{feedbackText}</S.FeedbackText>
                               </div>
-                            ) : (
-                              ''
                             )}
                           </div>
                         </div>

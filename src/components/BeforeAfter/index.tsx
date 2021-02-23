@@ -30,14 +30,11 @@ const BeforeAfter = ({
   subTitleSection
 }: Props) => (
   <S.Wrapper
-    className={`before-after ${classComponent ? classComponent : ''} ${
+    className={`before-after ${classComponent} ${
       bgColor ? `bg-${bgColor}` : 'bg-transparent'
     }`}
   >
-    <Container
-      isFluid={contentIsFluid ? contentIsFluid : false}
-      classContainer={classComponent ? classComponent : ''}
-    >
+    <Container isFluid={contentIsFluid ? contentIsFluid : false}>
       <S.CardRowHeader className={`col-md-12`}>
         {titleSection && (
           <>
