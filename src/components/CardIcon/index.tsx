@@ -29,36 +29,30 @@ const CardIcon = ({
 }: Props) => (
   <>
     <div className="col-6">
-      <S.Wrapper
-        className={`${classComponent ? classComponent : ''} card-icon`}
-      >
+      <S.Wrapper className={`${classComponent} card-icon`}>
         <div className="row no-gutters position-relative">
           <div
             className={`col-icon p-md-3 d-flex align-items-center ${
-              colorIcon ? `text-${colorIcon}` : ''
+              colorIcon && `text-${colorIcon}`
             }`}
           >
             <Clock width={sizeIcon} />
           </div>
           <div className="col-text position-static py-4 pl-md-0 d-flex align-items-center">
             <div>
-              <S.TitleCard className="mt-0">
-                {cardLeftTitle ? cardLeftTitle : ''}
-              </S.TitleCard>
-              <S.TextCard>{cardLeftText ? cardLeftText : ''}</S.TextCard>
+              <S.TitleCard className="mt-0">{cardLeftTitle}</S.TitleCard>
+              <S.TextCard>{cardLeftText}</S.TextCard>
             </div>
           </div>
         </div>
       </S.Wrapper>
     </div>
     <div className="col-6">
-      <S.Wrapper
-        className={`${classComponent ? classComponent : ''} card-icon`}
-      >
+      <S.Wrapper className={`${classComponent} card-icon`}>
         <div className="row no-gutters position-relative">
           <div
             className={`col-icon p-md-3 d-flex align-items-center ${
-              colorIcon ? `text-${colorIcon}` : ''
+              colorIcon && `text-${colorIcon}`
             }`}
           >
             <TelephoneFill width={sizeIcon} color={colorIcon} />
@@ -66,7 +60,7 @@ const CardIcon = ({
           <div className="col-text position-static py-4 pl-md-0 d-flex align-items-center">
             <div>
               <S.TitleCard className="mt-0">
-                {cardRightTitle ? cardRightTitle : ''}
+                {cardRightTitle && cardRightTitle}
               </S.TitleCard>
               <a
                 href={`https://api.whatsapp.com/send?phone=${numberWhatsapp}${
@@ -79,10 +73,10 @@ const CardIcon = ({
                   className="text-dark"
                   title="Click to send a message"
                 >
-                  {cardRightText ? cardRightText : ''}
+                  {cardRightText}
                   <MessageRoundedDetail
                     width="19"
-                    className={`ml-1 ${colorIcon ? `text-${colorIcon}` : ''}`}
+                    className={`ml-1 ${colorIcon && `text-${colorIcon}`}`}
                   />
                 </S.TextCard>
               </a>

@@ -73,6 +73,7 @@ export const Default: Story = (args) => {
 }
 
 Default.args = {
+  alignText: 'left',
   title: 'Title',
   subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   colorTitle: 'white',

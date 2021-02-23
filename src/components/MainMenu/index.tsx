@@ -33,7 +33,7 @@ const MainMenu = ({
   }
 
   return (
-    <S.Wrapper className={classComponent ? classComponent : ''}>
+    <S.Wrapper className={classComponent && classComponent}>
       <nav
         className={`navbar navbar-expand-md ${
           bgColorMenu ? `bg-${bgColorMenu}` : 'bg-dark'
@@ -81,7 +81,7 @@ const MainMenu = ({
             {mainMenu.map(({ label, url }, index) => (
               <S.MenuButton
                 bgColorLink={bgLinkActiveColor}
-                className={`nav-item ${url == currentPage ? 'active' : ''} ${
+                className={`nav-item ${url == currentPage && 'active'} ${
                   colorTextMenu ? `text-${colorTextMenu}` : 'text-primary'
                 }`}
                 key={index}
@@ -89,8 +89,8 @@ const MainMenu = ({
                 <Link href={url} prefetch={false}>
                   <a
                     className={`nav-link ${
-                      colorTextMenu ? `text-${colorTextMenu}` : ''
-                    } `}
+                      colorTextMenu && `text-${colorTextMenu}`
+                    }`}
                   >
                     {label}
                   </a>

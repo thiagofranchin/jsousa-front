@@ -49,7 +49,7 @@ const CardRow = ({
   <div className={bgColor ? `bg-${bgColor}` : 'bg-transparent'}>
     <Container
       isFluid={contentIsFluid ? contentIsFluid : false}
-      classContainer={classComponent ? classComponent : ''}
+      classContainer={classComponent}
     >
       <S.CardRowHeader className={`col-md-12`}>
         <S.CardRowTitle>{titleSection}</S.CardRowTitle>
@@ -58,7 +58,9 @@ const CardRow = ({
       </S.CardRowHeader>
 
       <S.CardRowColumnWrapper className="col-md-4">
-        <S.CardWrapper className="card">
+        <S.CardWrapper
+          className={`card ${bgColor ? `bg-${bgColor}` : 'bg-transparent'}`}
+        >
           <img
             src={urlImageCard1}
             className={`card-img-top w-${sizeImageCard1}`}
@@ -71,7 +73,9 @@ const CardRow = ({
         </S.CardWrapper>
       </S.CardRowColumnWrapper>
       <S.CardRowColumnWrapper className="col-md-4">
-        <S.CardWrapper className="card">
+        <S.CardWrapper
+          className={`card ${bgColor ? `bg-${bgColor}` : 'bg-transparent'}`}
+        >
           <img
             src={urlImageCard2}
             className={`card-img-top w-${sizeImageCard2}`}
@@ -84,7 +88,9 @@ const CardRow = ({
         </S.CardWrapper>
       </S.CardRowColumnWrapper>
       <S.CardRowColumnWrapper className="col-md-4">
-        <S.CardWrapper className="card">
+        <S.CardWrapper
+          className={`card ${bgColor ? `bg-${bgColor}` : 'bg-transparent'}`}
+        >
           <img
             src={urlImageCard3}
             className={`card-img-top w-${sizeImageCard3}`}

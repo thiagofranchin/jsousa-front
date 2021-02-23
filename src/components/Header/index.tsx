@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Header = ({ classComponent }: Props) => (
-  <S.Wrapper className={classComponent ? classComponent : ''}>
+  <S.Wrapper className={classComponent}>
     <header>
       <MainMenu classComponent="d-md-none" />
       <Container isFluid={false} classContainer="d-none d-md-block">

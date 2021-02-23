@@ -20,7 +20,7 @@ const ContentCardTabs = ({
   labelButtonColor
 }: ContentCardTabsProps) => (
   <S.Wrapper
-    className={`content-card-tabs ${classComponent ? classComponent : ''} ${
+    className={`content-card-tabs ${classComponent} ${
       bgColor ? `bg-${bgColor}` : 'bg-transparent'
     }`}
   >

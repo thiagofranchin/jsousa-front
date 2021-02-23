@@ -1,11 +1,29 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import Container from '../Container'
 import CardRow from '.'
 
 export default {
   title: 'CardRow',
   component: CardRow,
   argTypes: {
+    bgColor: {
+      control: {
+        type: 'select',
+        options: [
+          'transparent',
+          'white',
+          'primary',
+          'secondary',
+          'success',
+          'info',
+          'warning',
+          'danger',
+          'super-light',
+          'light',
+          'dark',
+          'super-dark'
+        ]
+      }
+    },
     sizeImageCard1: {
       control: {
         type: 'select',
@@ -27,11 +45,7 @@ export default {
   }
 } as Meta
 
-export const Default: Story = (args) => (
-  <Container isFluid={false}>
-    <CardRow {...args} />
-  </Container>
-)
+export const Default: Story = (args) => <CardRow {...args} />
 
 Default.args = {
   titleSection: 'Welcome To J. Sousa Cleaning Services',
@@ -50,5 +64,6 @@ Default.args = {
   titleCard3: `Card title 3`,
   textCard1: `1 Some quick example text to build on the card title and make up the bulk of the card content.`,
   textCard2: `2 Some quick example text to build on the card title and make up the bulk of the card content.`,
-  textCard3: `3 Some quick example text to build on the card title and make up the bulk of the card content.`
+  textCard3: `3 Some quick example text to build on the card title and make up the bulk of the card content.`,
+  classComponent: `py-5`
 }

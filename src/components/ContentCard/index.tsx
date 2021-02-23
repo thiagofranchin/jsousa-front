@@ -49,12 +49,14 @@ const ContentCard = ({
   linkUrl
 }: Props) => (
   <div className={bgColor ? `bg-${bgColor}` : 'bg-transparent'}>
-    <Container isFluid={contentIsFluid ? contentIsFluid : false}>
+    <Container
+      isFluid={contentIsFluid ? contentIsFluid : false}
+      classContainer={classContainer}
+    >
       <S.ContentCardWrapper
         className={`jumbotron
       ${bgColor ? `bg-${bgColor}` : 'bg-transparent'}
       ${textColor ? `text-${textColor}` : ''}
-      ${classContainer ? `text-${classContainer}` : ''}
     `}
       >
         <S.ContentCardRowWrapper

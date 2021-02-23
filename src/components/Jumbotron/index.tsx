@@ -21,18 +21,18 @@ const Jumbotron = ({
 }: Props) => (
   <S.JumbotronWrapper
     className={`jumbotron jumbotron-fluid
-      ${bgColor ? `bg-${bgColor}` : ''}
-      ${textColor ? `text-${textColor}` : ''}
+      ${bgColor && `bg-${bgColor}`}
+      ${textColor && `text-${textColor}`}
     `}
   >
     <div
       className={`container${contentIsFluid ? '-fluid' : ''}
-      ${textAlign ? `text-${textAlign}` : ''}
-      ${classContainer ? classContainer : ''}
+      ${textAlign && `text-${textAlign}`}
+      ${classContainer}
       `}
     >
-      <h1 className="display-4">{title ? title : ''}</h1>
-      <p className="lead">{text ? text : ''}</p>
+      <h1 className="display-4">{title}</h1>
+      <p className="lead">{text}</p>
     </div>
   </S.JumbotronWrapper>
 )

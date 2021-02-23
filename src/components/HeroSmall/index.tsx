@@ -1,6 +1,7 @@
 import * as S from './styles'
 
 type Props = {
+  alignText?: string
   classComponent?: string
   title?: string
   colorTitle?: string
@@ -11,6 +12,7 @@ type Props = {
 }
 
 const HeroSmall = ({
+  alignText,
   classComponent,
   title,
   colorTitle,
@@ -19,18 +21,16 @@ const HeroSmall = ({
   bgImageUrl,
   bgColor
 }: Props) => (
-  <S.Wrapper className={classComponent ? classComponent : ''}>
+  <S.Wrapper className={classComponent}>
     <S.HeroSmallWrapper
       style={{ backgroundImage: `url(${bgImageUrl})` }}
-      className={`${bgColor ? `bg-${bgColor}` : ''}`}
+      className={`${bgColor && `bg-${bgColor}`}`}
     >
-      <div className="container">
-        <S.SubTitle
-          className={`${colorSubTitle ? `text-${colorSubTitle}` : ''}`}
-        >
+      <div className={`container ${alignText && `text-${alignText}`}`}>
+        <S.SubTitle className={colorSubTitle && `text-${colorSubTitle}`}>
           {subTitle}
         </S.SubTitle>
-        <S.Title className={`${colorTitle ? `text-${colorTitle}` : ''}`}>
+        <S.Title className={colorTitle && `text-${colorTitle}`}>
           {title}
         </S.Title>
       </div>

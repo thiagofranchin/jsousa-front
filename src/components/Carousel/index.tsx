@@ -14,7 +14,7 @@ const Carousel = () => {
         key={i}
         data-target="#carouselExampleCaptions"
         data-slide-to={i}
-        className={`${i == 0 ? 'active' : ''}`}
+        className={`${i == 0 && 'active'}`}
       ></li>
     )
   }
@@ -26,44 +26,30 @@ const Carousel = () => {
         className="carousel slide"
         data-ride="carousel"
       >
-        {carouselLength > 1 ? (
-          <ol className="carousel-indicators">{dots}</ol>
-        ) : (
-          ''
-        )}
+        {carouselLength > 1 && <ol className="carousel-indicators">{dots}</ol>}
 
         <div className="carousel-inner">
           {carousel.map(({ title, text, imageUrl, labelButton }, index) => (
             <div
-              className={`carousel-item ${index == 0 ? 'active' : ''}`}
+              className={`carousel-item ${index == 0 && 'active'}`}
               key={index}
             >
-              <img
-                src={imageUrl ? imageUrl : ''}
-                className="d-block w-100"
-                alt="..."
-              />
+              <img src={imageUrl} className="d-block w-100" alt="..." />
               <S.CarouselContent className="carousel-caption d-none d-md-block text-left">
-                {title ? (
+                {title && (
                   <S.CarouselContentTitle className="w-50">
                     {title}
                   </S.CarouselContentTitle>
-                ) : (
-                  ''
                 )}
 
-                {text ? (
+                {text && (
                   <S.CarouselContentBody className="w-50">
                     {text}
                   </S.CarouselContentBody>
-                ) : (
-                  ''
                 )}
 
-                {labelButton ? (
+                {labelButton && (
                   <button className="btn btn-primary">{labelButton}</button>
-                ) : (
-                  ''
                 )}
               </S.CarouselContent>
             </div>
@@ -71,7 +57,7 @@ const Carousel = () => {
         </div>
 
         {/* ARROWS */}
-        {carouselLength > 1 ? (
+        {carouselLength > 1 && (
           <>
             <a
               className="carousel-control-prev"
@@ -93,8 +79,6 @@ const Carousel = () => {
               <span className="sr-only">Next</span>
             </a>
           </>
-        ) : (
-          ''
         )}
       </div>
     </S.Wrapper>
