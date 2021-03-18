@@ -15,8 +15,8 @@ type Props = {
   classComponent?: string
   contentIsFluid?: boolean
   positionLine?: number
-  titleSection?: string
   subTitleSection?: string
+  titleSection?: string
 }
 
 const BeforeAfter = ({
@@ -26,8 +26,8 @@ const BeforeAfter = ({
   classComponent,
   contentIsFluid,
   positionLine,
-  titleSection,
-  subTitleSection
+  subTitleSection,
+  titleSection
 }: Props) => (
   <S.Wrapper
     className={`before-after ${classComponent} ${
@@ -46,36 +46,46 @@ const BeforeAfter = ({
           <S.CardRowParagraph>{subTitleSection}</S.CardRowParagraph>
         )}
       </S.CardRowHeader>
-
-      {beforeAfter.map(({ category, imageUrl1, imageUrl2 }, index) => (
-        <div className="col-md-4 mb-5 mb-md-0" key={index}>
-          <S.CardWrapper
-            className={`card ${
-              borderColor ? `border-${borderColor}` : 'border-primary'
-            } `}
-          >
-            <ReactCompareSlider
-              className="card-img"
-              position={positionLine}
-              itemOne={
-                <ReactCompareSliderImage src={imageUrl1} alt="Image one" />
-              }
-              itemTwo={
-                <ReactCompareSliderImage src={imageUrl2} alt="Image two" />
-              }
-            />
-            <S.CardImageOverlayWrapper className="card-img-overlay">
-              <span
-                className={`card-title badge badge-pill ${
-                  badgeColor ? `badge-${badgeColor}` : 'badge-primary'
+      <>
+        {beforeAfter.map(
+          ({ category, imageUrl1, imageUrl2, textContent }, index) => (
+            <div className="col-md-4 mb-5 mb-md-0" key={index}>
+              <S.CardWrapper
+                className={`card ${
+                  borderColor ? `border-${borderColor}` : 'border-primary'
                 } `}
               >
-                {category}
-              </span>
-            </S.CardImageOverlayWrapper>
-          </S.CardWrapper>
-        </div>
-      ))}
+                <ReactCompareSlider
+                  className="card-img"
+                  position={positionLine}
+                  itemOne={
+                    <ReactCompareSliderImage src={imageUrl1} alt="Image one" />
+                  }
+                  itemTwo={
+                    <ReactCompareSliderImage src={imageUrl2} alt="Image two" />
+                  }
+                />
+                <S.CardImageOverlayWrapper className="card-img-overlay">
+                  <span
+                    className={`card-title badge badge-pill ${
+                      badgeColor ? `badge-${badgeColor}` : 'badge-primary'
+                    } `}
+                  >
+                    {category}
+                  </span>
+                </S.CardImageOverlayWrapper>
+              </S.CardWrapper>
+              {textContent && (
+                <S.CardRowContent className="card">
+                  <div className="card-body">
+                    <p className="card-text">{textContent}</p>
+                  </div>
+                </S.CardRowContent>
+              )}
+            </div>
+          )
+        )}
+      </>
     </Container>
   </S.Wrapper>
 )
