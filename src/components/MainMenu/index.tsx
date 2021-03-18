@@ -78,25 +78,27 @@ const MainMenu = ({
                 classComponent="pl-3 pr-2 mt-2 d-md-none"
               />
             </li>
-            {mainMenu.map(({ label, url }, index) => (
-              <S.MenuButton
-                bgColorLink={bgLinkActiveColor}
-                className={`nav-item ${url == currentPage && 'active'} ${
-                  colorTextMenu ? `text-${colorTextMenu}` : 'text-primary'
-                }`}
-                key={index}
-              >
-                <Link href={url} prefetch={false}>
-                  <a
-                    className={`nav-link ${
-                      colorTextMenu && `text-${colorTextMenu}`
-                    }`}
-                  >
-                    {label}
-                  </a>
-                </Link>
-              </S.MenuButton>
-            ))}
+            <>
+              {mainMenu.map(({ label, url }, index) => (
+                <S.MenuButton
+                  bgColorLink={bgLinkActiveColor}
+                  className={`nav-item ${url == currentPage && 'active'} ${
+                    colorTextMenu ? `text-${colorTextMenu}` : 'text-primary'
+                  }`}
+                  key={index}
+                >
+                  <Link href={url} prefetch={false}>
+                    <a
+                      className={`nav-link ${
+                        colorTextMenu && `text-${colorTextMenu}`
+                      }`}
+                    >
+                      {label}
+                    </a>
+                  </Link>
+                </S.MenuButton>
+              ))}
+            </>
           </ul>
         </div>
       </nav>

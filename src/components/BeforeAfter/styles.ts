@@ -11,6 +11,7 @@ export const CardImageOverlayWrapper = styled.div`
     position: absolute;
     top: 100%;
     transform: translate(-50%, -50%);
+    z-index: 1;
   }
 `
 
@@ -39,6 +40,16 @@ export const CardRowHeader = styled.div`
 
 export const CardRowTitle = styled.h2`
   text-align: center;
+`
+
+export const CardRowContent = styled.div`
+  margin-top: -15px;
+  z-index: -1;
+  box-shadow: inset 0px 70px 75px -45px #dedede;
+
+  .card-text {
+    margin-top: 30px;
+  }
 `
 
 export const Divider = styled.div`
