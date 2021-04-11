@@ -1,14 +1,27 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import Layout from '../components/Layout'
 
 import '../styles/global.scss'
 import GlobalStyles from 'styles/global'
 
 function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+  let path
+
+  if (router.pathname == '/') {
+    path = router.pathname.replace('/', 'home')
+    path = path[0].toUpperCase() + path.substr(1)
+  } else {
+    path = router.pathname.replace('/', '')
+    path = path[0].toUpperCase() + path.substr(1)
+  }
+
   return (
-    <>
+    <Layout>
       <Head>
-        <title>J. Sousa Cleaning Service</title>
+        <title>{path} | J. Sousa Cleaning Service</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -21,7 +34,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
-    </>
+    </Layout>
   )
 }
 
