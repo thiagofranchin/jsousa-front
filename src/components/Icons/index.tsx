@@ -11,6 +11,7 @@ import { Telephone } from '@styled-icons/bootstrap/Telephone'
 import { TelephoneFill } from '@styled-icons/bootstrap/TelephoneFill'
 import { Menu } from '@styled-icons/boxicons-regular/Menu'
 import { DoubleArrow } from '@styled-icons/material-rounded/DoubleArrow'
+import { Error } from '@styled-icons/boxicons-solid/Error'
 
 type Props = {
   colorIcon?: string
@@ -62,7 +63,9 @@ const Icons = ({ colorIcon = '#28B0D1' }: Props) => (
               <td>
                 <DoubleArrow width="40" color={colorIcon} />
               </td>
-              <td></td>
+              <td>
+                <Error width="40" color={colorIcon} />
+              </td>
             </tr>
           </tbody>
         </table>
