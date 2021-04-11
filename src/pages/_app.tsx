@@ -1,6 +1,8 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import NextNprogress from 'nextjs-progressbar'
+
 import Layout from '../components/Layout'
 
 import '../styles/global.scss'
@@ -33,6 +35,12 @@ function App({ Component, pageProps }: AppProps) {
         ></link>
       </Head>
       <GlobalStyles />
+      <NextNprogress
+        color="#15b1d7"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
       <Component {...pageProps} />
     </Layout>
   )
