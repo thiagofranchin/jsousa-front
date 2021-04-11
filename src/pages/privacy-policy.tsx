@@ -1,16 +1,14 @@
-import Layout from '../components/Layout'
 import Ckeditor from '../components/Ckeditor'
 
 export default function PrivacyPolicy() {
   return (
     <>
-      <Layout>
-        <Ckeditor
-          bgColor="super-light"
-          contentIsFluid={false}
-          eyebrow=""
-          eyebrowLinkColor="primary"
-          text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut massa a metus ultricies feugiat vel sit amet sem.
+      <Ckeditor
+        bgColor="super-light"
+        contentIsFluid={false}
+        eyebrow=""
+        eyebrowLinkColor="primary"
+        text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut massa a metus ultricies feugiat vel sit amet sem.
           Morbi urna augue, blandit mattis viverra nec, vehicula sed dui. Quisque finibus non nibh et lacinia. Cras eleifend
           scelerisque diam et ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus lectus sapien,
           interdum in commodo lobortis, semper sed turpis.</p>
@@ -90,10 +88,9 @@ export default function PrivacyPolicy() {
           Morbi urna augue, blandit mattis viverra nec, vehicula sed dui. Quisque finibus non nibh et lacinia. Cras eleifend
           scelerisque diam et ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus lectus sapien,
           interdum in commodo lobortis, semper sed turpis. </p>"
-          textColor=""
-          title="<h1>Privacy Policy</h1>"
-        />
-      </Layout>
+        textColor=""
+        title="<h1>Privacy Policy</h1>"
+      />
     </>
   )
 }
